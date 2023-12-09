@@ -1,16 +1,19 @@
 /* eslint-disable react/prop-types */
+//to handle props validation
 
+import PersonalDetailsEdit from "./PersonalDetailsEdit";
+import EducationEdit from "./EducationEdit";
 //import { useState } from "react";
 
 function Editor({details, toggleFunction, updateDetails}) {
 
     //const [value, setValue] = useState('');
-    //console.log(details);
-
+    console.log(details);
+    //console.log(updateDetails);
     return (
         <>
             <form>
-                <section className = "personal-detail-section"> 
+                {/* <section className = "personal-detail-section"> 
                     <h2>Personal Details</h2>
                     <label htmlFor='name' >Name:</label>
                     <br/>
@@ -41,9 +44,16 @@ function Editor({details, toggleFunction, updateDetails}) {
                         value={details.number}
                         onChange={(event) => updateDetails({...details , number: event.target.value})}
                     />
-                </section>
 
-                <section className="education-detail-section">
+                </section> */}
+                {<PersonalDetailsEdit
+                    details = {details}
+                    updateDetails = {updateDetails}
+                />}
+
+
+
+                {/* <section className="education-detail-section">
                     <h2>Education</h2>
                     <label htmlFor='institute-name' >Institute Name:</label>
                     <br/>
@@ -84,7 +94,10 @@ function Editor({details, toggleFunction, updateDetails}) {
                         value={details.endDate}
                         onChange={(event) => updateDetails({...details , endDate: event.target.value})}
                     />
-                </section>
+                </section> */}
+                {<EducationEdit
+                    details={details}
+                    updateDetails={updateDetails}/>}
                 
                 <section className="professional-detail-section">
                     <h2>Experience</h2>
