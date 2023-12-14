@@ -10,15 +10,24 @@ function Panel() {
         name: "",
         email: "",
         number: "",
-        education: [{institute: "",
+        education: [
+            {
+                institute: "",
         degree: "",
         startDate: "",
-        endDate: "",}],
-        company: "",
-        position: "",
-        role: "",
-        startDateJob: "",
-        endDateJob: "",
+        endDate: "",
+            },
+        ],
+        experience: [
+            {
+                company: "",
+                position: "",
+                role: "",
+                startDateJob: "",
+                endDateJob: "",
+            },
+        ]
+        
     };
     const [details, setDetails] = useState(detailObject);
     const [isActive, setActive] = useState(true);

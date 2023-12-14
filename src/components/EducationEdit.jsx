@@ -77,9 +77,8 @@ export default function EducationEdit({details, updateDetails}) {
                 <button type="button" onClick={increaseDegreeCount}>+</button>
             )
         }
-        else {
+        else 
             return null;
-        }
     }
 
     return (

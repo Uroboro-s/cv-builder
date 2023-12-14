@@ -3,6 +3,7 @@
 
 import PersonalDetailsEdit from "./PersonalDetailsEdit";
 import EducationEdit from "./EducationEdit";
+import ExperienceEdit from "./ExperienceEdit";
 //import { useState } from "react";
 
 function Editor({details, toggleFunction, updateDetails}) {
@@ -13,39 +14,7 @@ function Editor({details, toggleFunction, updateDetails}) {
     return (
         <>
             <form>
-                {/* <section className = "personal-detail-section"> 
-                    <h2>Personal Details</h2>
-                    <label htmlFor='name' >Name:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'person-name'
-                        id="person-name"
-                        value={details.name}
-                        onChange={(event) => updateDetails({...details , name: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="email">Email</label>
-                    <br/>
-                    <input
-                        type='email'
-                        name = 'person-email'
-                        id="person-email"
-                        value={details.email}
-                        onChange={(event) => updateDetails({...details , email: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="number">Phone Number:</label>
-                    <br/>
-                    <input
-                        type='tel'
-                        name = 'person-number'
-                        id="person-number"
-                        value={details.number}
-                        onChange={(event) => updateDetails({...details , number: event.target.value})}
-                    />
-
-                </section> */}
+                
                 {<PersonalDetailsEdit
                     details = {details}
                     updateDetails = {updateDetails}
@@ -53,53 +22,17 @@ function Editor({details, toggleFunction, updateDetails}) {
 
 
 
-                {/* <section className="education-detail-section">
-                    <h2>Education</h2>
-                    <label htmlFor='institute-name' >Institute Name:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'institute-name'
-                        id="institute-name"
-                        value={details.institute}
-                        onChange={(event) => updateDetails({...details , institute: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="email">Degree:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'institute-degree'
-                        id="institute-degree"
-                        value={details.degree}
-                        onChange={(event) => updateDetails({...details , degree: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="number">Start Date:</label>
-                    <br/>
-                    <input
-                        type='date'
-                        name = 'start-date'
-                        id="start-date"
-                        value={details.startDate}
-                        onChange={(event) => updateDetails({...details , startDate: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="number">End Date:</label>
-                    <br/>
-                    <input
-                        type='date'
-                        name = 'start-date'
-                        id="start-date"
-                        value={details.endDate}
-                        onChange={(event) => updateDetails({...details , endDate: event.target.value})}
-                    />
-                </section> */}
+                
                 {<EducationEdit
                     details={details}
-                    updateDetails={updateDetails}/>}
+                    updateDetails={updateDetails}/>
+                }
                 
-                <section className="professional-detail-section">
+                {<ExperienceEdit
+                    details={details}
+                    updateDetails={updateDetails}/>
+                }
+                {/* <section className="professional-detail-section">
                     <h2>Experience</h2>
                     <label htmlFor='institute-name' >Company:</label>
                     <br/>
@@ -150,7 +83,7 @@ function Editor({details, toggleFunction, updateDetails}) {
                         value={details.endDateJob}
                         onChange={(event) => updateDetails({...details , endDateJob: event.target.value})}
                     />
-                </section>
+                </section> */}
 
                 <button 
                     type="button"
