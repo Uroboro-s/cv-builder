@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 
 //import { useState } from "react";
+import PersonalDetails from "./PersonalDetailsDisplay";
+import Education from "./EducationDisplay";
+import Experience from "./ExperienceDisplay";
 
 function CVDisplay({details, toggleFunction}) {
     //console.log("control is here");
@@ -8,31 +11,15 @@ function CVDisplay({details, toggleFunction}) {
     console.log(details);
     return (
         <>
-            <div>
-                <p>{details.name}</p>
-                <hr />
-                <p>{details.email}</p>
-                <hr />
-                <p>{details.number}</p>
-                <hr />
-                <p>{details.institute}</p>
-                <hr />
-                <p>{details.degree}</p>
-                <hr />
-                <p>{details.startDate}</p>
-                <hr />
-                <p>{details.endDate}</p>
-                <hr />
-                <p>{details.company}</p>
-                <hr />
-                <p>{details.position}</p>
-                <hr />
-                <p>{details.role}</p>
-                <hr />
-                <p>{details.startDateJob}</p>
-                <hr />
-                <p>{details.endDateJob}</p>
-                <hr />
+            <div className="cv">
+                <PersonalDetails
+                    details={details}/>
+                
+                <Education
+                    details={details}/>
+
+                <Experience
+                    details={details}/>
                 
             </div>
             <button 
