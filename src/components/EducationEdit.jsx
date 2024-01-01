@@ -4,8 +4,8 @@ import { useState } from "react"
 import '../styles/education.css'
 
 function DegreeComponent({details, updateDetails, index}) {
-    console.log(index);
-    console.log(details);
+    // console.log(index);
+    // console.log(details);
     
     return (
         <>

@@ -4,6 +4,9 @@
 import PersonalDetailsEdit from "./PersonalDetailsEdit";
 import EducationEdit from "./EducationEdit";
 import ExperienceEdit from "./ExperienceEdit";
+import SkillEdit from "./SkillEdit";
+import LanguageEdit from "./LanguageEdit";
+import HobbiesEdit from "./HobbiesEdit";
 //import { useState } from "react";
 
 function Editor({details, toggleFunction, updateDetails}) {
@@ -17,11 +20,8 @@ function Editor({details, toggleFunction, updateDetails}) {
                 
                 {<PersonalDetailsEdit
                     details = {details}
-                    updateDetails = {updateDetails}
-                />}
-
-
-
+                    updateDetails = {updateDetails}/>
+                }
                 
                 {<EducationEdit
                     details={details}
@@ -32,58 +32,18 @@ function Editor({details, toggleFunction, updateDetails}) {
                     details={details}
                     updateDetails={updateDetails}/>
                 }
-                {/* <section className="professional-detail-section">
-                    <h2>Experience</h2>
-                    <label htmlFor='institute-name' >Company:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'company-name'
-                        id="company-name"
-                        value={details.company}
-                        onChange={(event) => updateDetails({...details , company: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="email">Position:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'position'
-                        id="position"
-                        value={details.position}
-                        onChange={(event) => updateDetails({...details , position: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="email">Role:</label>
-                    <br/>
-                    <input
-                        type='text'
-                        name = 'role'
-                        id="role"
-                        value={details.role}
-                        onChange={(event) => updateDetails({...details , role: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="number">Start Date:</label>
-                    <br/>
-                    <input
-                        type='date'
-                        name = 'start-date-job'
-                        id="start-date-job"
-                        value={details.startDateJob}
-                        onChange={(event) => updateDetails({...details , startDateJob: event.target.value})}
-                    />
-                    <br/>
-                    <label htmlFor="number">End Date:</label>
-                    <br/>
-                    <input
-                        type='date'
-                        name = 'end-date-job'
-                        id="end-date-job"
-                        value={details.endDateJob}
-                        onChange={(event) => updateDetails({...details , endDateJob: event.target.value})}
-                    />
-                </section> */}
+                {<SkillEdit
+                    details={details}
+                    updateDetails={updateDetails}/>    
+                }
+                {<HobbiesEdit
+                    details={details}
+                    updateDetails={updateDetails}/>
+                }
+                {<LanguageEdit
+                    details={details}
+                    updateDetails={updateDetails}/>
+                }
 
                 <button 
                     type="button"

@@ -4,8 +4,8 @@ import { useState } from "react";
 import '../styles/experience.css'
 
 function WorkComponent({details, updateDetails, index}) {
-    console.log(index);
-    console.log(details);
+    // console.log(index);
+    // console.log(details);
 
     return (
         <>

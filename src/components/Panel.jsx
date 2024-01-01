@@ -10,6 +10,17 @@ function Panel() {
         name: "",
         email: "",
         number: "",
+        linkedin: "",
+        github: "",
+        languages: [
+            "",
+        ],
+        hobbies: [
+            "", ""
+        ],
+        skills: [
+            "", ""
+        ],
         education: [
             {
                 institute: "",
@@ -26,7 +37,21 @@ function Panel() {
                 startDateJob: "",
                 endDateJob: "",
             },
+        ],
+        projects: [
+            {
+                domain: "",
+                title: "",
+                description: "",
+                technology: "",
+                links: "",
+                team: 0,
+                role: "",
+                startDate: "",
+                endDate: "",
+            }
         ]
+        
         
     };
     const [details, setDetails] = useState(detailObject);
