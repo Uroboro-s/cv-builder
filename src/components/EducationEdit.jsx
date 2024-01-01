@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react"
+//import { useState } from "react"
 import '../styles/education.css'
 
 function DegreeComponent({details, updateDetails, index}) {
@@ -57,7 +57,6 @@ function DegreeComponent({details, updateDetails, index}) {
 
 export default function EducationEdit({details, updateDetails}) {
 
-    const [degreeCount, setDegreeCount] = useState(1);
     //console.log(degreeCount);
     const increaseDegreeCount = () => {
         const degreeObj = {institute: "",
@@ -67,11 +66,15 @@ export default function EducationEdit({details, updateDetails}) {
         let newObj = {...details};
         newObj.education.push(degreeObj);
         updateDetails(newObj);
-        setDegreeCount(degreeCount+1);
+
     }
     
     const isButtonVisible = () => {
-        if(degreeCount <= 3){
+        let count = 1;
+        details.education.forEach(() => {
+            count++;
+        });
+        if(count <= 3){
             
             return (
                 <button type="button" onClick={increaseDegreeCount}>+</button>

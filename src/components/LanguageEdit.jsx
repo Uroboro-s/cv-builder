@@ -49,7 +49,7 @@ function LanguageEdit({details, updateDetails}) {
     return (
         <>
             <h2>Languages:</h2>
-            <section className="languages-section">
+            <section className="language-section">
                 {
                     details.languages.map((somevar, index) =>{
                         return (

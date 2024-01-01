@@ -5,7 +5,7 @@ import '../styles/project.css';
 
 function ProjectComponent({details, updateDetails, index}) {
     // console.log(index);
-    // console.log(details);
+     console.log(details.projects);
     
     return (
         <>
@@ -21,17 +21,17 @@ function ProjectComponent({details, updateDetails, index}) {
                             onChange={(event) => {let newObj = {...details}; newObj.projects[index].domain = event.target.value; updateDetails(newObj)}}
                         />
                         <br/>
-                        <label htmlFor="email">Title:</label>
+                        <label htmlFor="title">Title:</label>
                         <br/>
                         <input
                             type='text'
                             name = 'title'
 
                             value={details.projects[index].title}
-                            onChange={(event) => {let newObj = {...details}; newObj.education[index].title = event.target.value; updateDetails(newObj)}}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].title = event.target.value; updateDetails(newObj)}}
                         />
                         <br/>
-                        <label htmlFor="number">Start Date:</label>
+                        <label htmlFor="start-date">Start Date:</label>
                         <br/>
                         <input
                             type='date'
@@ -41,7 +41,7 @@ function ProjectComponent({details, updateDetails, index}) {
                             onChange={(event) => {let newObj = {...details}; newObj.projects[index].startDate = event.target.value; updateDetails(newObj)}}
                         />
                         <br/>
-                        <label htmlFor="number">End Date:</label>
+                        <label htmlFor="end-date">End Date:</label>
                         <br/>
                         <input
                             type='date'
@@ -50,6 +50,58 @@ function ProjectComponent({details, updateDetails, index}) {
                             value={details.projects[index].endDate}
                             onChange={(event) => {let newObj = {...details}; newObj.projects[index].endDate = event.target.value; updateDetails(newObj)}}
                         />
+                        <br/>
+                        <label htmlFor="description">Description:</label>
+                        <br/>
+                        <input
+                            type='text'
+                            name = 'description'
+
+                            value={details.projects[index].description}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].description = event.target.value; updateDetails(newObj)}}
+                        />
+                        <br/>
+                        <label htmlFor="end-date">Technologies:</label>
+                        <br/>
+                        <input
+                            type='text'
+                            name = 'technology'
+
+                            value={details.projects[index].technology}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].technology = event.target.value; updateDetails(newObj)}}
+                        />
+                        <br/>
+                        <label htmlFor="end-date">Links:</label>
+                        <br/>
+                        <input
+                            type='text'
+                            name = 'links'
+
+                            value={details.projects[index].links}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].links = event.target.value; updateDetails(newObj)}}
+                        />
+                        <br/>
+                        <label htmlFor="end-date">Team:</label>
+                        <br/>
+                        <input
+                            type='number'
+                            name = 'team'
+
+                            value={details.projects[index].team}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].team = event.target.value; updateDetails(newObj)}}
+                        />
+                        <br/>
+                        <label htmlFor="end-date">Role:</label>
+                        <br/>
+                        <input
+                            type='text'
+                            name = 'role'
+
+                            value={details.projects[index].role}
+                            onChange={(event) => {let newObj = {...details}; newObj.projects[index].role = event.target.value; updateDetails(newObj)}}
+                        />
+                        <br/>
+                        
             </div>
         </>
     )
@@ -75,7 +127,7 @@ function ProjectEdit({details, updateDetails}) {
     }
     
     const isButtonVisible = () => {
-        let count =0;
+        let count =1;
         details.projects.forEach(() => {
             count++;
         });

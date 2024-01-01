@@ -4,7 +4,7 @@
 
 function SkillComponent({details, index, updateDetails}) {
     
-    console.log(details.skills);
+    //console.log(details.skills);
 
     return (
         <>

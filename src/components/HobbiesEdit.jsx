@@ -3,7 +3,7 @@
 
 function HobbyComponent({details, index, updateDetails}) {
     
-    console.log(details.hobbies);
+    //console.log(details.hobbies);
 
     return (
         <>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+//import { useState } from "react";
 import '../styles/experience.css'
 
 function WorkComponent({details, updateDetails, index}) {
@@ -66,7 +66,7 @@ function WorkComponent({details, updateDetails, index}) {
 }
 
 export default function ExperienceEdit({details, updateDetails}) {
-    const [jobCount, setJobCount] = useState(1);
+    //const [jobCount, setJobCount] = useState(1);
 
     const increaseJobCount = () => {
         const jobObj = {
@@ -79,11 +79,14 @@ export default function ExperienceEdit({details, updateDetails}) {
         let newObj = {...details};
         newObj.experience.push(jobObj);
         updateDetails(newObj);
-        setJobCount(jobCount+1);
     }
 
     const isButtonVisible = () => {
-        if(jobCount <= 3){
+        let count =1;
+        details.experience.forEach(() => {
+            count++;
+        });
+        if(count <= 3){
 
             return (
                 <button type="button" onClick={increaseJobCount}>+</button>
